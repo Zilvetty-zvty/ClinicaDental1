@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦷 Clínica Dental</h1>
+        </header>
+
+        <main>
+            <div class="left-panel">
+                <section class="lista-section">
+                    <h2>Pacientes</h2>
+                    <div id="pacientesList" class="pacientes-list"></div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Crear Paciente</h2>
+                    <form id="pacienteForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email">
+                        </div>
+                        <button type="submit" class="btn">Crear</button>
+                    </form>
+                    <div id="mensaje" class="mensaje"></div>
+                </section>
+            </div>
+
+            <div class="right-panel">
+                <section class="detalle-section" id="detalleSection" style="display:none;">
+                    <h2>Detalles del Paciente</h2>
+                    <div id="detalles">
+                        <p><strong>Nombre:</strong> <span id="detalleName"></span></p>
+                        <p><strong>Teléfono:</strong> <span id="detallePhone"></span></p>
+                        <p><strong>Email:</strong> <span id="detalleEmail"></span></p>
+                    </div>
+                </section>
+                <section class="vacio-section" id="vacioSection">
+                    <p>Selecciona un paciente para ver sus detalles</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Clínica Dental</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
